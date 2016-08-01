@@ -10,6 +10,10 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+    int i;
+    for(i=0;i<10;i++)
+    {
+        printf("%d\n",i*i);
+    }
     return 0;
 }
