@@ -1,0 +1,95 @@
+B. Given a non-negative integer (n), create a function that returns (n) in alphabetical order, according to the literal spelling of each digit in (n).
+
+Test Cases :
+Input: 101 (one, zero, one) >> Output: 110 (one, one, zero)
+Input: 5544 (five, five, four, four) >> Output: 5544 (five, five, four, four)
+
+
+
+import java.util.*;
+import java.io.*;
+
+public class Demo{
+
+     public static void main(String []args){
+     String no;
+     Scanner sc=new Scanner(System.in);
+     no=sc.nextLine();
+     doTask(no);
+     }
+     
+     public static void doTask(String no)
+     {
+        int l=no.length();
+        String number[]=new String[l];
+        int size[]=new int[l];
+         
+        for(int i=0;i<l;i++)
+         {
+            char ch=no.charAt(i);
+            switch(ch)
+            {
+                case '0': 
+                    number[i]="zero";
+                    size[i]=number[i].length();
+                    break;
+                    
+                case '1' : 
+                    number[i]="one";
+                    size[i]=number[i].length();
+                    break;
+                    
+                case '2' : 
+                     number[i]="two";
+                     size[i]=number[i].length();
+                    break;
+                    
+                case '3' : 
+                     number[i]="three";
+                     size[i]=number[i].length();
+                     break;
+                     
+                case '4' : 
+                     number[i]="four";
+                     size[i]=number[i].length();
+                     break;
+                     
+                case '5' : 
+                     number[i]="five";
+                     size[i]=number[i].length();
+                     break;
+                case '6' : 
+                     number[i]="six";
+                     size[i]=number[i].length();
+                     break;
+                case '7' : 
+                     number[i]="seven";
+                     size[i]=number[i].length();
+                     break; 
+                case '8' : 
+                     number[i]="eight";
+                     size[i]=number[i].length();
+                     break;   
+                default : 
+                System.out.println("No match");
+            }
+         }
+         
+         for(int i=0;i<l;i++)
+         {
+             for(int j=i+1;j<l;j++)
+             {
+                 if(number[i].length()<number[j].length())
+                    {
+                        String t;
+                        t=number[j];
+                        number[j]=number[i];
+                        number[i]=t;
+                    }
+             }
+         }
+         for(int i=0;i<l;i++)
+            System.out.println(number[i]);
+         
+    }
+}
