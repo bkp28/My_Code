@@ -1,10 +1,3 @@
-B. Given a non-negative integer (n), create a function that returns (n) in alphabetical order, according to the literal spelling of each digit in (n).
-
-Test Cases :
-Input: 101 (one, zero, one) >> Output: 110 (one, one, zero)
-Input: 5544 (five, five, four, four) >> Output: 5544 (five, five, four, four)
-
-
 
 import java.util.*;
 import java.io.*;
