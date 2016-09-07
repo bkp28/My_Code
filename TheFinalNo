@@ -1,0 +1,50 @@
+#include <stdio.h>
+#define A 4
+#define S 60
+#define M 5
+//#define D 4
+ 
+int main(void) {
+	// your code goes here
+	int arr[5],i;
+	char ch;
+	/*for(i=0;i<4;i++)
+	{
+		scanf("%d",&arr[i]);
+ 
+	}*/
+ 
+	printf("\nchar : ");
+	ch=getch();
+ 
+ 
+		switch(op)
+		{
+			case '+':
+					for(i=0;i<5;i++)
+						arr[i]=arr[i]+A;
+					printf("%d\n",arr[i]);
+					break;
+ 
+ 
+			case '-':
+					for(i=0;i<5;i++)
+						arr[i]=arr[i]-S;
+					printf("%d\n",arr[i]);
+					break;
+ 
+ 
+			case '*':
+					for(i=0;i<5;i++)
+						arr[i]=arr[i]*M;
+ 
+					printf("%d\n",arr[i]);
+					break;
+ 
+			default :
+				printf("enter valid..");
+		}
+ 
+	return 0;
+}
+ 
