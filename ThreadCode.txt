@@ -1,0 +1,51 @@
+import java.lang.*;
+
+class A extends Thread
+{
+	String str;	
+	A(String str)
+	{
+		this.str=str;	
+	}	
+	public void run()
+	{
+		//System.out.println("Thread 1..!!"+str);
+		try{
+		for(int i=0;i<5;i++)
+			{
+				System.out.println("Daemon -"+Thread.currentThread().isDaemon());
+				Thread.sleep(1000);
+				System.out.println(Thread.currentThread().getName());
+			
+			}
+			}
+		catch(InterruptedException e){
+						System.out.println("Err"+e);
+				
+				}
+	}
+}
+public class Test{
+
+	public static void main(String a[])
+	{
+		//System.out.print("a");
+		A th1=new A("TH1");
+		th1.setName("Thread1");
+		th1.setDaemon(true);		
+		
+		//th1.setPriority(Thread.MAX_PRIORITY);
+		
+		A th2=new A("Th2");
+		th2.setName("Thread2");
+		th2.setPriority(Thread.MIN_PRIORITY);
+		
+		th1.start();
+		//try{
+		//th1.join(10000);}catch(InterruptedException e){}
+		th2.start();
+		
+		
+	}
+	
+}
